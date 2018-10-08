@@ -20,7 +20,7 @@ class App extends Component {
       <div className="App">
         <header>
           <img onClick={this.toggle}src={hamburger}/>
-          <ul className={this.state.show ? 'basic show': 'basic hide'}>
+          <ul className={this.state.show ? 'basic show': 'basic'}>
             <li>Home</li>
             <li>About </li>
             <li>Store</li>

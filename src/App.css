@@ -7,12 +7,8 @@ img {
   color: white;
   height: 0;
   transition: 1s;
-}
-
-.hide {
   height: 0px;
   overflow: hidden;
- 
 }
 
 .show {
