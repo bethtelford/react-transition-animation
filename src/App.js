@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import hamburger from './hamburger_menu.svg';
 
 class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
-      expand: false
+      show: false
     }
+    this.toggle = this.toggle.bind(this);
+  }
+  toggle() {
+    this.setState({
+      show: !this.state.show
+    })
   }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} alt='hamburger menu' onClick={()=> this.setState({expand:!this.state.expand})}/>
-          <ul className={`nav ${this.state.expand ? 'expand': null}`}>
+        <header>
+          <img onClick={this.toggle}src={hamburger}/>
+          <ul className={this.state.show ? 'basic show': 'basic hide'}>
             <li>Home</li>
-            <li>About Us</li>
-            <li>Pet Search</li>
+            <li>About </li>
+            <li>Store</li>
           </ul>
         </header>
       </div>
